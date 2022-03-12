@@ -1,27 +1,23 @@
 #include <stdio.h>
-
 /**
- *  main - prints hexadecimal base 0123456789abcdef, using putchar
- *  Return: Always 0 (Success)
+ * main - main block
+ * Description: Print all numbers of base64 in lowercase.
+ * You can only use `putchar`, and only 3 times.
+ * Return: 0
  */
-
 int main(void)
 {
-	int n = '0';
-	int a_to_f = 'a';
+	char c;
+	int i;
 
-	while (n <= '9') /*print 0-9*/
+	for (i = 0; i < 10; i++)
 	{
-		putchar(n);
-		n++;
+		putchar(i + '0');
 	}
-
-	while (a_to_f <= 'f') /*print a-f to finish hexbase*/
+	for (c = 'a'; c < 'g'; c++)
+	{
+		putchar(c);
 	}
-		putchar(a_to_f);
-		a_to_f++;
-	}
-
 	putchar('\n');
 
 	return (0);
